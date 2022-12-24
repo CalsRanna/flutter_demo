@@ -32,7 +32,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<Map<String, dynamic>> demos = [
     {'name': 'Book Reader', 'route': const BookReaderDemo()},
-    {'name': 'Cache View', 'route': const CachedView()},
+    {'name': 'Cached Network', 'route': const CachedView()},
     {'name': 'Snow Man', 'route': const SnaowMan()},
   ];
   @override
@@ -61,9 +61,11 @@ class _HomePageState extends State<HomePage> {
                 height: 72,
                 child: Text(
                   demos[index]['name'],
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.w700,
-                    fontSize: 24,
+                    fontSize: 20,
                     color: Colors.white,
                   ),
                 ),
